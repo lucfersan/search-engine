@@ -34,8 +34,8 @@ const getResults = () => {
   if (search) {
     for (const student of students) {
       if (
-        student.name.toLowerCase().startsWith(search.toLowerCase()) ||
-        student.course.toLowerCase().startsWith(search.toLowerCase())
+        student.name.toLowerCase().includes(search.toLowerCase()) ||
+        student.course.toLowerCase().includes(search.toLowerCase())
       ) {
         selectElement('.results').innerHTML += `
           <div class="result-item">
